@@ -49,7 +49,7 @@ public sealed class Crc32Computer
         
         if (Arm.Crc32.Arm64.IsSupported)
         {
-            return Arm.Crc32.Arm64.ComputeCrc32(crc, data);
+            return Arm.Crc32.Arm64.ComputeCrc32C(crc, data);
         }
 
         throw new PlatformNotSupportedException();
@@ -64,7 +64,7 @@ public sealed class Crc32Computer
         
         if (Arm.Crc32.IsSupported)
         {
-            return Arm.Crc32.ComputeCrc32(crc, data);
+            return Arm.Crc32.ComputeCrc32C(crc, data);
         }
 
         throw new PlatformNotSupportedException();
